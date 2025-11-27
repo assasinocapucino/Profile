@@ -20,11 +20,14 @@ html {
 
 /* --- HEADER & NAVIGASI --- */
 .main-header {
+    /* Menyesuaikan display agar tombol musik terlihat rapi */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
     border-bottom: 1px solid #eee;
+    /* Mengizinkan wrap pada layar kecil, menjaga header tetap flex */
+    flex-wrap: wrap; 
 }
 
 .logo {
@@ -32,6 +35,12 @@ html {
     font-size: 1.5em;
     font-weight: 700;
     letter-spacing: 2px;
+}
+
+/* Menggabungkan nav dan tombol kontrol di satu sisi */
+.main-nav {
+    display: flex;
+    align-items: center;
 }
 
 .main-nav ul {
@@ -54,7 +63,7 @@ html {
     color: #a08050; 
 }
 
-/* --- BUTTONS --- */
+/* --- BUTTONS & KONTROL MUSIK --- */
 .btn {
     padding: 10px 20px;
     text-decoration: none;
@@ -63,6 +72,7 @@ html {
     font-weight: 500;
     text-transform: uppercase;
     font-size: 0.9em;
+    cursor: pointer; /* Menambahkan pointer untuk semua tombol */
 }
 
 .secondary-btn {
@@ -75,6 +85,13 @@ html {
 .secondary-btn:hover {
     background-color: #a08050;
     color: #fff;
+}
+
+/* KOREKSI: Override margin-top untuk tombol musik di header */
+#music-control-btn {
+    margin-top: 0 !important; 
+    margin-left: 20px;
+    font-size: 0.8em; /* Sedikit lebih kecil agar kompak */
 }
 
 /* --- HERO SECTION --- */
@@ -250,5 +267,31 @@ html {
     
     .about-content p {
         text-align: left;
+    }
+}
+
+/* RESPONSIVE STYLING KHUSUS HEADER DENGAN TOMBOL MUSIK */
+@media (max-width: 650px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        width: 100%; /* Navigasi mengambil lebar penuh */
+        justify-content: space-between;
+        margin-top: 10px;
+        flex-wrap: wrap; 
+    }
+    
+    .main-nav ul {
+        margin-bottom: 10px;
+    }
+    
+    #music-control-btn {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%; /* Tombol mengambil lebar penuh di layar kecil */
+        text-align: center;
     }
 }
