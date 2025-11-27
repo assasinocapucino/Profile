@@ -278,3 +278,29 @@ html {
     color: #a08050; /* Warna aksen saat di-hover */
     border-bottom-color: #a08050;
 }
+/* Styling untuk gambar di Hero Section */
+.hero-image {
+    flex: 1;
+    height: 500px; /* Tinggi placeholder yang Anda tetapkan sebelumnya */
+    /* Hapus background-color: #ddd; dan properti background-image lama di sini */
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+    display: block;
+}
+/* Styling untuk gambar di About Section */
+.about-photo {
+    width: 100%;
+    height: 450px; /* Tinggi placeholder yang Anda tetapkan sebelumnya */
+    /* Hapus background-color: #ccc; dan properti background-image lama di sini */
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+    display: block;
+}
