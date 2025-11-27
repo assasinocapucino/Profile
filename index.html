@@ -10,7 +10,7 @@
 <body id="top"> 
 
     <audio id="bg-music" autoplay loop muted>
-        <source src="lofi-instrumental-409202.mp3" type="audio/mp3">
+        <source src="v4.www-y2mate.blog - NIKI - Backburner (Official Music Video) (320 KBps).mp3" type="audio/mp3">
         Browser Anda tidak mendukung elemen audio.
     </audio>
     <header class="main-header">
@@ -27,7 +27,7 @@
         <button id="music-control-btn" class="btn secondary-btn" style="margin-top: 0; margin-left: 20px;">
             &#x1F507; Aktifkan Musik
         </button>
-        </header>
+    </header>
 
     <section class="hero-section">
         <div class="hero-content">
@@ -50,13 +50,13 @@
             <h2>Mengenal Saya Lebih Dekat</h2>
             
             <p>
-                Saya Zain, mahasiswa **Universitas Brawijaya tahun 2025 dari jurusan (Instrumentasi). Saya memiliki minat yang mendalam pada bidang pengukuran, sensor, dan sistem otomasi, serta bagaimana teknologi dapat digunakan untuk meningkatkan ketelitian dan efisiensi dalam berbagai proses.
+                Saya **Zain**, mahasiswa **Universitas Brawijaya** tahun 2025 dari jurusan **Instrumentasi**. Saya memiliki minat yang mendalam pada bidang pengukuran, sensor, dan sistem otomasi, serta bagaimana teknologi dapat digunakan untuk meningkatkan ketelitian dan efisiensi dalam berbagai proses.
             </p>
             <p>
-                Selama menempuh studi, saya terbiasa bekerja dengan pendekatan analitis dan praktis, mulai dari perancangan rangkaian, pengolahan data, hingga pemahaman dasar pemrograman dan integrasi perangkat.
+                Selama menempuh studi, saya terbiasa bekerja dengan **pendekatan analitis dan praktis**, mulai dari perancangan rangkaian, pengolahan data, hingga pemahaman dasar pemrograman dan integrasi perangkat.
             </p>
             <p>
-                Saya menyukai pekerjaan yang menuntut ketelitian, pemecahan masalah, dan kemampuan berpikir sistematis**. Selain itu, saya terbiasa bekerja dalam tim maupun secara mandiri, serta terbuka untuk mempelajari perangkat atau metode baru yang relevan dengan kebutuhan proyek. Dengan latar belakang tersebut, saya berupaya untuk terus mengembangkan kemampuan teknis dan soft skills sebagai bekal untuk berkontribusi di bidang instrumentasi dan teknologi.
+                Saya menyukai pekerjaan yang menuntut **ketelitian, pemecahan masalah, dan kemampuan berpikir sistematis**. Selain itu, saya terbiasa bekerja dalam tim maupun secara mandiri, serta terbuka untuk mempelajari perangkat atau metode baru yang relevan dengan kebutuhan proyek. Dengan latar belakang tersebut, saya berupaya untuk terus mengembangkan kemampuan teknis dan *soft skills* sebagai bekal untuk berkontribusi di bidang instrumentasi dan teknologi.
             </p>
             
             <a href="https://www.instagram.com/asuransiberjalan/" target="_blank" class="btn secondary-btn">TEMUKAN KONTEN SAYA</a>
@@ -77,4 +77,21 @@
             const controlBtn = document.getElementById('music-control-btn');
             
             // Mencoba memutar musik (akan diputar dalam mode muted)
-            music.play().catch
+            music.play().catch(error => {
+                console.log("Autoplay failed, user must interact.");
+            });
+            
+            controlBtn.addEventListener('click', () => {
+                if (music.muted) {
+                    music.muted = false;
+                    controlBtn.innerHTML = '&#x1F50A; Matikan Musik';
+                    music.play();
+                } else {
+                    music.muted = true;
+                    controlBtn.innerHTML = '&#x1F507; Aktifkan Musik';
+                }
+            });
+        });
+    </script>
+    </body>
+</html>
