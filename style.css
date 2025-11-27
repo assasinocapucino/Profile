@@ -117,3 +117,71 @@ body {
     color: #666;
     margin-bottom: 30px;
 }
+```css
+/* ABOUT SECTION STYLING */
+.about-section {
+    display: flex;
+    /* Memastikan gambar dan teks sejajar, dengan ruang di antaranya */
+    justify-content: space-between; 
+    align-items: center;
+    padding: 100px 5%;
+    background-color: #f0f0f0; /* Latar belakang abu-abu sangat muda/krem untuk kontras */
+}
+
+.about-image-container {
+    flex: 0 0 40%; /* Mengambil 40% lebar */
+    padding-right: 50px;
+}
+
+.about-photo {
+    width: 100%;
+    /* Tinggi dibuat responsif, namun bisa diset fix jika diperlukan */
+    height: 450px; 
+    background-color: #ccc; /* Placeholder untuk foto */
+    background-image: url('your_professional_photo.jpg'); /* Ganti dengan URL foto Anda */
+    background-size: cover;
+    background-position: center;
+    /* Efek bayangan atau border bisa ditambahkan di sini untuk gaya */
+}
+
+.about-content {
+    flex: 0 0 55%; /* Mengambil 55% lebar */
+    max-width: 600px;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Memastikan tombol di bagian About menggunakan gaya yang sama */
+.about-content .secondary-btn {
+    margin-top: 30px;
+}
+
+/* Responsif Dasar (untuk tampilan di layar yang lebih kecil) */
+@media (max-width: 900px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image-container {
+        padding-right: 0;
+        margin-bottom: 40px;
+        flex: 100%;
+    }
+
+    .about-content {
+        flex: 100%;
+    }
+}
