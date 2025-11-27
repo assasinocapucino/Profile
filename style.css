@@ -6,10 +6,15 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Font untuk body text */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333; /* Warna teks gelap */
-    background-color: #f8f8f8; /* Warna latar belakang sangat terang/biru muda */
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+html {
+    /* Untuk gulir halus saat klik Home/About */
+    scroll-behavior: smooth; 
 }
 
 /* HEADER & NAVIGASI */
@@ -18,11 +23,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    border-bottom: 1px solid #eee; /* Garis pemisah halus */
+    border-bottom: 1px solid #eee;
 }
 
 .logo {
-    font-family: 'Playfair Display', serif; /* Font elegan untuk logo */
+    font-family: 'Playfair Display', serif;
     font-size: 1.5em;
     font-weight: 700;
     letter-spacing: 2px;
@@ -45,7 +50,7 @@ body {
 }
 
 .main-nav ul li a:hover {
-    color: #a08050; /* Warna aksen gold lembut */
+    color: #a08050; 
 }
 
 /* BUTTONS */
@@ -59,17 +64,7 @@ body {
     font-size: 0.9em;
 }
 
-.primary-btn {
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
-}
-
-.primary-btn:hover {
-    background-color: #fff;
-    color: #000;
-}
-
+/* Hanya mempertahankan secondary-btn yang Anda gunakan */
 .secondary-btn {
     background-color: transparent;
     color: #a08050;
@@ -88,21 +83,12 @@ body {
     align-items: center;
     padding: 80px 5%;
     gap: 5%;
-    min-height: 80vh; /* Tinggi minimal untuk layar besar */
+    min-height: 80vh;
 }
 
 .hero-content {
     flex: 1;
     max-width: 50%;
-}
-
-.hero-image {
-    flex: 1;
-    background-color: #ddd; /* Placeholder warna abu-abu untuk gambar */
-    height: 500px;
-    background-image: url('placeholder-photo.jpg'); /* Ganti dengan URL foto Anda */
-    background-size: cover;
-    background-position: center;
 }
 
 .hero-content h1 {
@@ -117,36 +103,60 @@ body {
     color: #666;
     margin-bottom: 30px;
 }
-```css
-/* ABOUT SECTION STYLING */
+
+/* HERO IMAGE STYLING (DIKOREKSI) */
+.hero-image {
+    flex: 1;
+    height: 500px;
+    /* Menghapus semua background lama */
+    background-color: transparent; 
+    background-image: none;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    /* Memastikan foto mengisi seluruh kotak */
+    object-fit: cover; 
+    display: block;
+}
+
+/* ABOUT SECTION STYLING (DIKOREKSI DAN DIGABUNGKAN) */
 .about-section {
     display: flex;
-    /* Memastikan gambar dan teks sejajar, dengan ruang di antaranya */
-    justify-content: space-between; 
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start; 
     padding: 100px 5%;
-    background-color: #f0f0f0; /* Latar belakang abu-abu sangat muda/krem untuk kontras */
+    background-color: #f0f0f0; /* Warna Krem/Abu Muda */
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .about-image-container {
-    flex: 0 0 40%; /* Mengambil 40% lebar */
+    flex: 0 0 35%; 
     padding-right: 50px;
 }
 
+/* ABOUT PHOTO STYLING (DIKOREKSI) */
 .about-photo {
     width: 100%;
-    /* Tinggi dibuat responsif, namun bisa diset fix jika diperlukan */
-    height: 450px; 
-    background-color: #ccc; /* Placeholder untuk foto */
-    background-image: url('your_professional_photo.jpg'); /* Ganti dengan URL foto Anda */
-    background-size: cover;
-    background-position: center;
-    /* Efek bayangan atau border bisa ditambahkan di sini untuk gaya */
+    height: 450px;
+    /* Menghapus semua background lama */
+    background-color: transparent; 
+    background-image: none;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    /* Memastikan foto mengisi seluruh kotak */
+    object-fit: cover; 
+    display: block;
 }
 
 .about-content {
-    flex: 0 0 55%; /* Mengambil 55% lebar */
-    max-width: 600px;
+    flex: 0 0 60%;
+    max-width: 700px;
 }
 
 .about-content h2 {
@@ -161,15 +171,63 @@ body {
     margin-bottom: 15px;
     line-height: 1.7;
     color: #555;
+    text-align: left;
 }
 
-/* Memastikan tombol di bagian About menggunakan gaya yang sama */
 .about-content .secondary-btn {
     margin-top: 30px;
 }
 
-/* Responsif Dasar (untuk tampilan di layar yang lebih kecil) */
+/* FOOTER STYLING */
+.main-footer {
+    padding: 30px 5%;
+    text-align: center;
+    background-color: #333; 
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.main-footer .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.main-footer .footer-links a:hover {
+    color: #a08050;
+}
+
+/* Styling untuk Tautan Kembali ke Atas di Footer */
+.footer-home-link {
+    color: #fff; 
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-home-link:hover {
+    color: #a08050; 
+    border-bottom-color: #a08050;
+}
+
+/* RESPONSIVE STYLING */
 @media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+    }
+    
     .about-section {
         flex-direction: column;
         text-align: center;
@@ -183,113 +241,11 @@ body {
 
     .about-content {
         flex: 100%;
-    }
-}
-/* ABOUT SECTION STYLING (DIMODIFIKASI) */
-.about-section {
-    display: flex;
-    /* Aligment diubah agar konten utama tetap bisa fokus di tengah */
-    justify-content: center; 
-    align-items: flex-start; /* Ubah ke flex-start agar tidak terlalu kaku */
-    padding: 100px 5%;
-    background-color: #f0f0f0; 
-    max-width: 1200px; /* Batasi lebar keseluruhan section */
-    margin: 0 auto; /* Pusatkan section di halaman */
-}
-
-/* Container Gambar: Dibuat lebih kecil dan lebih terpusat */
-.about-image-container {
-    flex: 0 0 35%; /* Mengambil 35% lebar (sedikit lebih kecil) */
-    padding-right: 50px;
-    /* Pastikan gambar terpusat jika menggunakan flex-start di atas */
-}
-
-.about-photo {
-    width: 100%;
-    height: 450px; 
-    background-color: #ccc; 
-    background-image: url('your_professional_photo.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Konten Teks: Sekarang mengambil 60% dan teksnya terpusat secara visual */
-.about-content {
-    flex: 0 0 60%; /* Mengambil 60% lebar */
-    max-width: 700px; /* Batasi lebar teks untuk tampilan yang lebih rapi */
-    /* Hapus margin auto jika Anda ingin teks sejajar kiri (seperti contoh asli) */
-}
-
-.about-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2em;
-    margin-bottom: 25px;
-    color: #333;
-}
-
-.about-content p {
-    font-size: 1.05em;
-    margin-bottom: 15px;
-    line-height: 1.7;
-    color: #555;
-    /* Teks tetap sejajar kiri, tetapi karena lebar konten dibatasi, 
-       secara visual teks akan tampak lebih terpusat di layar yang lebar. */
-}
-/* ... */
-/* Responsif Dasar (untuk tampilan di layar yang lebih kecil) */
-@media (max-width: 900px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center; /* Memusatkan elemen seperti H2 dan tombol */
-    }
-
-    .about-image-container {
-        padding-right: 0;
-        margin-bottom: 40px;
-        flex: 100%;
-    }
-
-    .about-content {
-        flex: 100%;
-        /* Teks akan menempati lebar penuh, tetapi kita bisa membatasi lebar 
-           paragraf untuk tampilan yang lebih rapi pada mobile */
         max-width: 500px; 
         margin: 0 auto;
     }
     
     .about-content p {
-        text-align: left; /* Biarkan paragraf tetap rata kiri untuk keterbacaan yang lebih baik */
+        text-align: left;
     }
-}
-html {
-    scroll-behavior: smooth;
-}
-/* Styling untuk Tautan Kembali ke Atas di Footer */
-.footer-home-link {
-    color: #fff; /* Warna kontras di footer gelap */
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-block;
-    margin-bottom: 10px;
-    border-bottom: 1px solid transparent;
-}
-
-.footer-home-link:hover {
-    color: #a08050; /* Warna aksen saat di-hover */
-    border-bottom-color: #a08050;
-}/* ABOUT SECTION - REVISI UNTUK MENAMPILKAN GAMBAR DARI TAG <img> */
-.about-photo {
-    width: 100%;
-    height: 450px; 
-    /* Hapus properti background-image & background-color lama */
-    background-image: none;
-    background-color: transparent;
-}
-
-.about-img {
-    width: 100%;
-    height: 100%;
-    /* object-fit: cover memastikan gambar mengisi kotak tanpa distorsi */
-    object-fit: cover; 
-    display: block;
 }
