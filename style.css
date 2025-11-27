@@ -261,3 +261,6 @@ body {
         text-align: left; /* Biarkan paragraf tetap rata kiri untuk keterbacaan yang lebih baik */
     }
 }
+html {
+    scroll-behavior: smooth;
+}
