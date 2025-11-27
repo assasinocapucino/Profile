@@ -277,30 +277,19 @@ html {
 .footer-home-link:hover {
     color: #a08050; /* Warna aksen saat di-hover */
     border-bottom-color: #a08050;
-}
-/* Styling untuk gambar di Hero Section */
-.hero-image {
-    flex: 1;
-    height: 500px; /* Tinggi placeholder yang Anda tetapkan sebelumnya */
-    /* Hapus background-color: #ddd; dan properti background-image lama di sini */
-}
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
-    display: block;
-}
-/* Styling untuk gambar di About Section */
+}/* ABOUT SECTION - REVISI UNTUK MENAMPILKAN GAMBAR DARI TAG <img> */
 .about-photo {
     width: 100%;
-    height: 450px; /* Tinggi placeholder yang Anda tetapkan sebelumnya */
-    /* Hapus background-color: #ccc; dan properti background-image lama di sini */
+    height: 450px; 
+    /* Hapus properti background-image & background-color lama */
+    background-image: none;
+    background-color: transparent;
 }
 
 .about-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+    /* object-fit: cover memastikan gambar mengisi kotak tanpa distorsi */
+    object-fit: cover; 
     display: block;
 }
