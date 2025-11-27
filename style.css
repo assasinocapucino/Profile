@@ -264,3 +264,17 @@ body {
 html {
     scroll-behavior: smooth;
 }
+/* Styling untuk Tautan Kembali ke Atas di Footer */
+.footer-home-link {
+    color: #fff; /* Warna kontras di footer gelap */
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-home-link:hover {
+    color: #a08050; /* Warna aksen saat di-hover */
+    border-bottom-color: #a08050;
+}
