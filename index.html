@@ -1,32 +1,67 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Profil Biru + Fuji + Animasi</title>
+  <title>Portofolio - Nama Kamu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Musik Instrumen -->
-  <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2023/02/14/audio_164b670c51.mp3" type="audio/mpeg">
-    Browsermu tidak mendukung audio.
-  </audio>
-  
-  <div class="container">
-    <div class="sidebar">
-      <p>tema biru tua <br>lalu ke biru muda</p>
-    </div>
-    <div class="profile">
-      <!-- Ganti src di bawah dengan foto wajahmu -->
-      <div class="foto-profile">
-        <img src="https://avatars.githubusercontent.com/u/3369400?v=4" alt="Foto Profil" />
+  <header>
+    <div class="logo">Nama Kamu</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="intro" id="home">
+      <h1>Hello, I'm Nama Kamu</h1>
+      <p>Designer, Frontend Developer, and dreamer based in Indonesia.</p>
+    </section>
+    <section class="grid" id="work">
+      <div class="grid-item">
+        <div class="grid-thumb">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Project 1">
+        </div>
+        <h3>Project 1</h3>
+        <p>Desain Website Modern</p>
       </div>
-      <div class="nama-panggilan">Nama Panggilan</div>
-      <div class="box" style="animation-delay: 0s;">Instagram</div>
-      <div class="box" style="animation-delay: 0.2s;">TIKTOK</div>
-      <div class="box" style="animation-delay: 0.4s;">FAKULTAS</div>
-      <div class="box" style="animation-delay: 0.6s;">JURUSAN</div>
-    </div>
-  </div>
+      <div class="grid-item">
+        <div class="grid-thumb">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Project 2">
+        </div>
+        <h3>Project 2</h3>
+        <p>Branding, Identity</p>
+      </div>
+      <div class="grid-item">
+        <div class="grid-thumb">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Project 3">
+        </div>
+        <h3>Project 3</h3>
+        <p>Illustration Artwork</p>
+      </div>
+      <div class="grid-item">
+        <div class="grid-thumb">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80" alt="Project 4">
+        </div>
+        <h3>Project 4</h3>
+        <p>UI/UX Mobile App</p>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Saya suka membuat website yang estetis dan fungsional.</p>
+    </section>
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:kamu@email.com">kamu@email.com</a></p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Nama Kamu - All rights reserved.
+  </footer>
 </body>
 </html>
