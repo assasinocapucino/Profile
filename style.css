@@ -185,3 +185,79 @@ body {
         flex: 100%;
     }
 }
+/* ABOUT SECTION STYLING (DIMODIFIKASI) */
+.about-section {
+    display: flex;
+    /* Aligment diubah agar konten utama tetap bisa fokus di tengah */
+    justify-content: center; 
+    align-items: flex-start; /* Ubah ke flex-start agar tidak terlalu kaku */
+    padding: 100px 5%;
+    background-color: #f0f0f0; 
+    max-width: 1200px; /* Batasi lebar keseluruhan section */
+    margin: 0 auto; /* Pusatkan section di halaman */
+}
+
+/* Container Gambar: Dibuat lebih kecil dan lebih terpusat */
+.about-image-container {
+    flex: 0 0 35%; /* Mengambil 35% lebar (sedikit lebih kecil) */
+    padding-right: 50px;
+    /* Pastikan gambar terpusat jika menggunakan flex-start di atas */
+}
+
+.about-photo {
+    width: 100%;
+    height: 450px; 
+    background-color: #ccc; 
+    background-image: url('your_professional_photo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Konten Teks: Sekarang mengambil 60% dan teksnya terpusat secara visual */
+.about-content {
+    flex: 0 0 60%; /* Mengambil 60% lebar */
+    max-width: 700px; /* Batasi lebar teks untuk tampilan yang lebih rapi */
+    /* Hapus margin auto jika Anda ingin teks sejajar kiri (seperti contoh asli) */
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+    /* Teks tetap sejajar kiri, tetapi karena lebar konten dibatasi, 
+       secara visual teks akan tampak lebih terpusat di layar yang lebar. */
+}
+/* ... */
+/* Responsif Dasar (untuk tampilan di layar yang lebih kecil) */
+@media (max-width: 900px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center; /* Memusatkan elemen seperti H2 dan tombol */
+    }
+
+    .about-image-container {
+        padding-right: 0;
+        margin-bottom: 40px;
+        flex: 100%;
+    }
+
+    .about-content {
+        flex: 100%;
+        /* Teks akan menempati lebar penuh, tetapi kita bisa membatasi lebar 
+           paragraf untuk tampilan yang lebih rapi pada mobile */
+        max-width: 500px; 
+        margin: 0 auto;
+    }
+    
+    .about-content p {
+        text-align: left; /* Biarkan paragraf tetap rata kiri untuk keterbacaan yang lebih baik */
+    }
+}
